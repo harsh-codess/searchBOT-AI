@@ -2,12 +2,90 @@
 
 A Streamlit-based chatbot that can search the web using multiple sources including Arxiv, Wikipedia, and DuckDuckGo. Built with LangChain and powered by Groq's Llama3 model.
 
+## 🚀 **Live Demo**
+
+### 🌐 **Try it Now - No Setup Required!**
+**👉 [Launch Live Demo](https://searchbot-ai-harshcodess.streamlit.app/) 👈**
+
+Experience the power of context-aware search right in your browser! The live demo showcases all features including:
+- ✅ Real-time web search across multiple sources
+- ✅ Context memory that remembers your conversation
+- ✅ Intelligent follow-up question handling
+- ✅ Lightning-fast Groq Llama3 responses
+
+> 🔥 **Just enter your Groq API key and start chatting instantly!**
+
+## 🌟 Key Features
+
+### 🧠 **Context Memory - The Game Changer**
+This search engine chatbot **remembers your entire conversation history**, making it incredibly powerful for:
+- **Follow-up questions**: Ask "tell me more about that" and it knows exactly what you're referring to
+- **Contextual searches**: Build upon previous topics without repeating information
+- **Coherent conversations**: Maintains thread of discussion across multiple queries
+- **Personalized responses**: Adapts answers based on your previous interests and questions
+
+### 🔍 **Multi-Source Intelligence**
+- **Arxiv Integration**: Access latest academic papers and research
+- **Wikipedia Search**: Comprehensive encyclopedia knowledge
+- **DuckDuckGo Web Search**: Real-time web information
+- **Smart Agent**: Intelligently chooses the best source for your query
+
+## 📸 Demo
+
+### 🌟 **Live Application**
+**🔗 [https://searchbot-ai-harshcodess.streamlit.app/](https://searchbot-ai-harshcodess.streamlit.app/)**
+
+### Application Interface
+![Front Page](assets/front%20page.png)
+*Clean and intuitive chat interface*
+
+### Live Demo
+![Demo](assets/demo.png)
+*See the context memory in action - notice how it remembers previous conversations!*
+
 ## Features
 
+- **🧠 Context Memory**: Remembers your entire chat history for coherent, contextual conversations
 - **Multi-source Search**: Integrates Arxiv, Wikipedia, and DuckDuckGo search
 - **Real-time Chat**: Interactive chat interface with streaming responses
 - **Agent-based Architecture**: Uses LangChain agents for intelligent query handling
 - **Streamlit UI**: Clean and intuitive web interface
+
+## 🔑 Getting Your Groq API Key
+
+### Why Groq?
+Groq provides lightning-fast inference for Llama3 models, making your chat experience smooth and responsive.
+
+### Step-by-Step Guide:
+1. **Visit Groq Console**: Go to [console.groq.com](https://console.groq.com/)
+2. **Sign Up**: Create a free account (GitHub/Google sign-in available)
+3. **Navigate to API Keys**: Find "API Keys" in the left sidebar
+4. **Create New Key**: Click "Create API Key"
+5. **Copy Your Key**: Save it securely - you won't see it again!
+6. **Free Tier**: Groq offers generous free usage limits
+
+> ⚠️ **Important**: Keep your API key secure and never share it publicly!
+
+## 💡 How Context Memory Works
+
+The chatbot maintains conversation context through:
+
+1. **Session State Management**: Your chat history is preserved throughout the session
+2. **Contextual Understanding**: Each new query is processed with full conversation context
+3. **Intelligent Responses**: The AI understands references to previous topics
+4. **Seamless Experience**: No need to repeat information or context
+
+**Example Conversation:**
+```
+You: "What is quantum computing?"
+Bot: [Detailed explanation about quantum computing]
+
+You: "How does it compare to classical computing?"
+Bot: [Compares quantum vs classical, referencing the previous explanation]
+
+You: "Show me recent papers on this topic"
+Bot: [Searches Arxiv for quantum computing papers, knowing the context]
+```
 
 ## Prerequisites
 
@@ -90,11 +168,17 @@ A Streamlit-based chatbot that can search the web using multiple sources includi
 
 ## Usage
 
-1. Enter your Groq API key in the sidebar
-2. Start chatting with questions like:
+1. **Enter your Groq API key** in the sidebar (see [Getting Your Groq API Key](#-getting-your-groq-api-key) section)
+2. **Start chatting** with questions like:
    - "What is machine learning?"
    - "Latest research on quantum computing"
-   - "Tell me about climate change"
+   - "Tell me more about that" (it remembers context!)
+   - "How does this relate to what we discussed earlier?"
+
+### 🧠 **Pro Tip**: Take advantage of the context memory!
+- Ask follow-up questions without repeating context
+- Build complex discussions over multiple queries
+- Reference previous topics naturally
 
 ## Project Structure
 
