@@ -1,3 +1,5 @@
+<!-- Created by Harsh Gidwani -->
+
 # 🔎 LangChain Search Engine Chat
 
 A Streamlit-based chatbot that can search the web using multiple sources including Arxiv, Wikipedia, and DuckDuckGo. Built with LangChain and powered by Groq's Llama3 model.
@@ -202,3 +204,7 @@ search engine GEN AI/
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Created by Harsh Gidwani** 🚀
