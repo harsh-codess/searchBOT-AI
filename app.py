@@ -20,19 +20,71 @@ wiki=WikipediaQueryRun(api_wrapper=api_wrapper)
 search=DuckDuckGoSearchRun(name="Search")
 
 
-st.title("🔎 LangChain - Chat with search")
-"""
-In this example, we're using `StreamlitCallbackHandler` to display the thoughts and actions of an agent in an interactive Streamlit app.
-Try more LangChain 🤝 Streamlit Agent examples at [github.com/langchain-ai/streamlit-agent](https://github.com/langchain-ai/streamlit-agent).
-"""
+# Custom CSS for better styling
+st.markdown("""
+<style>
+    .main-header {
+        text-align: center;
+        color: #1f77b4;
+        margin-bottom: 2rem;
+    }
+    .credit-footer {
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+        color: #666;
+        border: 1px solid #ddd;
+    }
+    .search-container {
+        background-color: #f0f2f6;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+    .stChatMessage {
+        border-radius: 15px;
+        margin: 10px 0;
+    }
+</style>
+""", unsafe_allow_html=True)
 
-## Sidebar for settings
-st.sidebar.title("Settings")
-api_key=st.sidebar.text_input("Enter your Groq API Key:",type="password")
+# Main title with better styling
+st.markdown('<h1 class="main-header">🔎 LangChain - Chat with Search</h1>', unsafe_allow_html=True)
 
-# Use environment variable as fallback
-if not api_key:
-    api_key = os.getenv("GROQ_API_KEY")
+# Create columns for better layout
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.markdown("""
+    <div class="search-container">
+        <p style="text-align: center; color: #666;">
+            🤖 AI-powered search assistant with access to arXiv, Wikipedia, and web search<br>
+            Ask me anything and I'll search for the most relevant information!
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Enhanced sidebar
+with st.sidebar:
+    st.markdown("### ⚙️ Configuration")
+    api_key = st.text_input("🔑 Enter your Groq API Key:", type="password", help="Your Groq API key for accessing the LLM")
+    
+    st.markdown("---")
+    st.markdown("### 🔍 Search Sources")
+    st.markdown("""
+    - 📚 **arXiv**: Academic papers
+    - 📖 **Wikipedia**: General knowledge
+    - 🌐 **Web Search**: Real-time information
+    """)
+    
+    st.markdown("---")
+    st.markdown("### 💡 Tips")
+    st.info("💡 Try asking about recent events, scientific papers, or general knowledge topics!")
+
+# ...existing code...
 
 if "messages" not in st.session_state:
     st.session_state["messages"]=[
@@ -60,4 +112,11 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         response=search_agent.run(st.session_state.messages,callbacks=[st_cb])
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
+
+# Add footer with your name
+st.markdown("""
+<div class="credit-footer">
+    Made with ❤️ by Harsh Gidwani
+</div>
+""", unsafe_allow_html=True)
 
