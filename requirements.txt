@@ -1,0 +1,8 @@
+streamlit
+langchain
+groq
+huggingface_hub
+python-dotenv
+requests
+beautifulsoup4
+lxml
