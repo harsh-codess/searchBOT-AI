@@ -4,6 +4,8 @@
 
 A Streamlit-based chatbot that can search the web using multiple sources including Arxiv, Wikipedia, and DuckDuckGo. Built with LangChain and powered by Groq's Llama3 model.
 
+> ⚠️ **Important Limitation**: This chatbot may show errors or provide inaccurate information when asked about events that occurred after 2020, as the underlying model has knowledge cutoffs. For the most recent information, please verify with current sources.
+
 ## 🚀 **Live Demo**
 
 ### 🌐 **Try it Now - No Setup Required!**
