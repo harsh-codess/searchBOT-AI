@@ -1,6 +1,6 @@
 <!-- Created by Harsh Gidwani -->
 
-# 🔎 LangChain Search Engine Chat
+# 🔎 LangChain Search Engine Chats
 
 A Streamlit-based chatbot that can search the web using multiple sources including Arxiv, Wikipedia, and DuckDuckGo. Built with LangChain and powered by Groq's Llama3 model.
 
